@@ -32,7 +32,7 @@ class CreatePatientsTable extends Migration
             $table->string('telephone',13)->nullable();
             $table->string('image')->default('dist/img/avatar.png');
             $table->timestamps();
-            $table->primary('id');
+            // $table->primary('id');
             $table->softDeletes();
         });
     }

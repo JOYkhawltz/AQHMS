@@ -13,32 +13,32 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'email' => 'shakthisachintha@gmail.com',
-                'name' => 'shakthi sachintha',
+                'email' => 'bilalkhan@gmail.com',
+                'name' => 'Bilal Khan',
                 'password' => '$2y$10$T/AO49e7BmIC9aUG/33mAOdy9yDm/SUGUZC5zU.3Gtj4Lvvf.27My', //12345678
-                'education' => 'acccccccccccccccccadc',
-                'location' => 'sfavasdvasd',
-                'skills' => 'asdasd',
+                'education' => 'software eng',
+                'location' => 'karachi',
+                'skills' => 'developer',
                 'notes' => '4a56sd4avas',
-                'contactnumber' => '774345234',
+                'contactnumber' => '3333312315',
                 'user_type' => 'admin'
             ],
 
             [
-                'email' => 'ssakunchamikara@gmail.com',
-                'name' => "sakun chamikara",
+                'email' => 'hammadqazi@gmail.com',
+                'name' => "Hammad Qazi",
                 'password' => '$2y$10$T/AO49e7BmIC9aUG/33mAOdy9yDm/SUGUZC5zU.3Gtj4Lvvf.27My', //12345678
-                'education' => 'acccccccccccccccccadc',
-                'location' => 'sfavasdvasd',
-                'skills' => 'asdasd',
+                'education' => 'software eng',
+                'location' => 'karachi',
+                'skills' => 'developer',
                 'notes' => '4a56sd4avas',
-                'contactnumber' => '767035067',
+                'contactnumber' => '1235464826',
                 'user_type' => 'doctor'
             ],
 
             [
-                'email' => 'sachinthaindu95@gmail.com',
-                'name' => "sachin de silva",
+                'email' => 'amir@gmail.com',
+                'name' => "amir ahmed",
                 'password' => '$2y$10$T/AO49e7BmIC9aUG/33mAOdy9yDm/SUGUZC5zU.3Gtj4Lvvf.27My', //12345678
                 'education' => 'acccccccccccccccccadc',
                 'location' => 'sfavasdvasd',
@@ -49,8 +49,8 @@ class UsersTableSeeder extends Seeder
             ],
 
             [
-                'email' => 'sanduniiresha1029@gmail.com',
-                'name' => "sanduni iresha",
+                'email' => 'bilalqazi@gmail.com',
+                'name' => "bilal qazi",
                 'password' => '$2y$10$T/AO49e7BmIC9aUG/33mAOdy9yDm/SUGUZC5zU.3Gtj4Lvvf.27My', //12345678
                 'education' => 'acccccccccccccccccadc',
                 'location' => 'sfavasdvasd',
@@ -61,8 +61,8 @@ class UsersTableSeeder extends Seeder
             ],
 
             [
-                'email' => 'hasikadilshani@gmail.com',
-                'name' => "hasika dilshani",
+                'email' => 'waseem@gmail.com',
+                'name' => "waseem ahmed",
                 'password' => '$2y$10$T/AO49e7BmIC9aUG/33mAOdy9yDm/SUGUZC5zU.3Gtj4Lvvf.27My', //12345678
                 'education' => 'acccccccccccccccccadc',
                 'location' => 'sfavasdvasd',

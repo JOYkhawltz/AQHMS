@@ -15,8 +15,8 @@ class PatientTableSeeder extends Seeder
         DB::table('patients')->insert([
             [
                 'id' => '1910101',
-                'name' => 'Shakthi Sachintha',
-                'address' => '15/5A,AG Gunarathne Mw,Balagewaththa,Maitipe,Galle.',
+                'name' => 'hammad qazi',
+                'address' => 'north nazimabad karachi',
                 'sex' => 'Male',
                 'bod' => '1997-06-25',
                 'occupation' => 'Student',
@@ -28,8 +28,8 @@ class PatientTableSeeder extends Seeder
             ],
             [
                 'id' => '1910102',
-                'name' => 'Sakun Chamikara',
-                'address' => '23/45,Meepawla,Galle.',
+                'name' => 'bilal khan',
+                'address' => 'muka chok karachi',
                 'sex' => 'Male',
                 'bod' => '1997-12-25',
                 'occupation' => 'Student',
