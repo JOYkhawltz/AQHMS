@@ -70,7 +70,9 @@ Route::get('/HRMS', ['as' => 'HRMSView', 'uses' => 'HRMSController@index'])->mid
 // HIMS
 Route::get('/HIMS', ['as' => 'HIMSView', 'uses' => 'HIMSController@index'])->middleware('auth', 'pharmacist', 'lang');
 // PURCHASE
-Route::get('/purchase', ['as' => 'PurchaseView', 'uses' => 'PurchaseController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/PurchaseReturn', ['as' => 'PurchaseReturn', 'uses' => 'PurchaseController@PurchaseReturn'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/PurchaseInvoice', ['as' => 'PurchaseInvoice', 'uses' => 'PurchaseController@PurchaseInvoice'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/PurchaseOrder', ['as' => 'PurchaseOrder', 'uses' => 'PurchaseController@PurchaseOrder'])->middleware('auth', 'pharmacist', 'lang');
 // SALES
 Route::get('/sales', ['as' => 'SalesView', 'uses' => 'SalesController@index'])->middleware('auth', 'pharmacist', 'lang');
 // INVENTORY

@@ -372,9 +372,30 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                     <li class="{{Active::checkRoute('HIMSView')}}"><a href="{{route('HIMSView')}}"><i
                                 class="fa fa-briefcase-medical" ></i><span>HIMS</span></a>
                     </li>
-                    <li class="{{Active::checkRoute('PurchaseView')}}"><a href="{{route('PurchaseView')}}"><i
-                                class="fa fa-store" ></i><span> PURCHASE </span></a>
+
+                    <li
+                        class="treeview {{Active::checkRoute(['PurchaseReturn','PurchaseInvoice','PurchaseOrder'])}}">
+                        <a href="#"><i class="fas fa-user-injured"></i><span> PURCHASE</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{{Active::checkRoute('PurchaseReturn')}}"><a href="{{route('PurchaseReturn')}}"><i
+                                class="fa fa-store" ></i><span> PURCHASE RETURN </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('PurchaseInvoice')}}"><a href="{{route('PurchaseInvoice')}}"><i
+                                class="fa fa-store" ></i><span> PURCHASE INVOICE </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('PurchaseOrder')}}"><a href="{{route('PurchaseOrder')}}"><i
+                                class="fa fa-store" ></i><span> PURCHASE ORDER </span></a>
+                            </li>
+                        </ul>
+                        <ul class="treeview-menu">
+                            
+                        </ul>
                     </li>
+
                     <li class="{{Active::checkRoute('SalesView')}}"><a href="{{route('SalesView')}}"><i
                                 class="fa fa-cart-arrow-down"></i><span> SALES </span></a>
                     </li>
@@ -561,13 +582,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                                         aria-hidden=" true"></i> Attendance Report</a></li>
                         </ul>
                     </li>
-
-                    <li>
-                        <a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank">
-                            <i class="fas fa-folder-plus"></i>
-                            <span> Template</span>
-                        </a>
-                    </li>
+                     /* templete line here */
 
                 </ul>
 
@@ -575,6 +590,12 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
             </section>
             <!-- /.sidebar -->
         </aside>
+        /* <li>
+                        <a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank">
+                            <i class="fas fa-folder-plus"></i>
+                            <span> Template</span>
+                        </a>
+                    </li> */ 
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -603,7 +624,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                 Version 1.0
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; {{date('Y')}} <a href="#">Smart Hospital Systems</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; {{date('Y')}} <a href="#">DR AQ Hospital System</a>.</strong> All rights reserved.
         </footer>
 
 
