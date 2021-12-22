@@ -2,7 +2,7 @@
 
 @section('title', $title)
 
-@section('content_title',"PURCHASE")
+@section('content_title',"PURCHASE RETURN")
 @section('content_description',"")
 @section('breadcrumbs')
 

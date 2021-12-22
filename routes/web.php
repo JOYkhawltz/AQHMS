@@ -70,15 +70,22 @@ Route::get('/HRMS', ['as' => 'HRMSView', 'uses' => 'HRMSController@index'])->mid
 // HIMS
 Route::get('/HIMS', ['as' => 'HIMSView', 'uses' => 'HIMSController@index'])->middleware('auth', 'pharmacist', 'lang');
 // PURCHASE
-Route::get('/PurchaseReturn', ['as' => 'PurchaseReturn', 'uses' => 'PurchaseController@PurchaseReturn'])->middleware('auth', 'pharmacist', 'lang');
-Route::get('/PurchaseInvoice', ['as' => 'PurchaseInvoice', 'uses' => 'PurchaseController@PurchaseInvoice'])->middleware('auth', 'pharmacist', 'lang');
-Route::get('/PurchaseOrder', ['as' => 'PurchaseOrder', 'uses' => 'PurchaseController@PurchaseOrder'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/PurchaseReturn', ['as' => 'PurchaseReturnView', 'uses' => 'PurchaseController@PurchaseReturn'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/PurchaseInvoice', ['as' => 'PurchaseInvoiceView', 'uses' => 'PurchaseController@PurchaseInvoice'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/PurchaseOrder', ['as' => 'PurchaseOrderView', 'uses' => 'PurchaseController@PurchaseOrder'])->middleware('auth', 'pharmacist', 'lang');
 // SALES
-Route::get('/sales', ['as' => 'SalesView', 'uses' => 'SalesController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/SalesReturn', ['as' => 'SalesReturnView', 'uses' => 'SalesController@SalesReturn'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/SalesInvoice', ['as' => 'SalesInvoiceView', 'uses' => 'SalesController@SalesInvoice'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Receipt&refund', ['as' => 'Receipt&refundView', 'uses' => 'SalesController@Receiptandrefund'])->middleware('auth', 'pharmacist', 'lang');
 // INVENTORY
 Route::get('/inventory', ['as' => 'InventoryView', 'uses' => 'InventoryController@index'])->middleware('auth', 'pharmacist', 'lang');
 // reportss
-Route::get('/reportss', ['as' => 'ReportssView', 'uses' => 'ReportssController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/GeneralLedgerReports', ['as' => 'generalledgerView', 'uses' => 'ReportssController@generalledger'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/OPDReports', ['as' => 'OPDReportsView', 'uses' => 'ReportssController@OPDReports'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/SalesandPurchaseReports', ['as' => 'SalesandPurchaseReportsView', 'uses' => 'ReportssController@SalesandPurchaseReports'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/StockReports', ['as' => 'StockReportsView', 'uses' => 'ReportssController@StockReports'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/ChallanReports', ['as' => 'ChallanReportsView', 'uses' => 'ReportssController@ChallanReports'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/FinancialReports', ['as' => 'FinancialReportsView', 'uses' => 'ReportssController@FinancialReports'])->middleware('auth', 'pharmacist', 'lang');
 // administration
 Route::get('/administration', ['as' => 'AdministrationView', 'uses' => 'AdministrationController@index'])->middleware('auth', 'pharmacist', 'lang');
 // Check Patient Routes

@@ -2,7 +2,7 @@
 
 @section('title', $title)
 
-@section('content_title',"PURCHASE")
+@section('content_title',"PURCHASE INVOICE")
 @section('content_description',"")
 @section('breadcrumbs')
 
@@ -89,6 +89,14 @@
                         <div class="col-sm-10">
                             <input type="date" 
                                 class="form-control" name="Party Bill date" placeholder="Enter party bill date ">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Party Bill" class="col-sm-2 control-label">{{__('Party Bill #')}}</label>
+                        <div class="col-sm-10">
+                            <input type="number" 
+                                class="form-control" name="Comment" placeholder="Enter Party Bill">
                         </div>
                     </div>
 

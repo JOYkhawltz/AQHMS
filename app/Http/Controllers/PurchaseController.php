@@ -11,18 +11,18 @@ class PurchaseController extends Controller
     {
         $user = Auth::user();
         return view('PURCHASE.PurchaseReturn',
-        ['title' => "purchase"]);
+        ['title' => "Purchase Return"]);
     }
     public function PurchaseInvoice()
     {
         $user = Auth::user();
         return view('PURCHASE.PurchaseInvoice',
-        ['title' => "purchase"]);
+        ['title' => "Purchase Invoice"]);
     }
     public function PurchaseOrder()
     {
         $user = Auth::user();
         return view('PURCHASE.PurchaseOrder',
-        ['title' => "purchase"]);
+        ['title' => "Purchase Order"]);
     }
 }

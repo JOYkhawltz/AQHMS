@@ -374,37 +374,77 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                     </li>
 
                     <li
-                        class="treeview {{Active::checkRoute(['PurchaseReturn','PurchaseInvoice','PurchaseOrder'])}}">
+                        class="treeview {{Active::checkRoute(['PurchaseReturnView','PurchaseInvoiceView','PurchaseOrderView'])}}">
                         <a href="#"><i class="fas fa-user-injured"></i><span> PURCHASE</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('PurchaseReturn')}}"><a href="{{route('PurchaseReturn')}}"><i
+                            <li class="{{Active::checkRoute('PurchaseReturnView')}}"><a href="{{route('PurchaseReturnView')}}"><i
                                 class="fa fa-store" ></i><span> PURCHASE RETURN </span></a>
                             </li>
-                            <li class="{{Active::checkRoute('PurchaseInvoice')}}"><a href="{{route('PurchaseInvoice')}}"><i
+                            <li class="{{Active::checkRoute('PurchaseInvoiceView')}}"><a href="{{route('PurchaseInvoiceView')}}"><i
                                 class="fa fa-store" ></i><span> PURCHASE INVOICE </span></a>
                             </li>
-                            <li class="{{Active::checkRoute('PurchaseOrder')}}"><a href="{{route('PurchaseOrder')}}"><i
+                            <li class="{{Active::checkRoute('PurchaseOrderView')}}"><a href="{{route('PurchaseOrderView')}}"><i
                                 class="fa fa-store" ></i><span> PURCHASE ORDER </span></a>
                             </li>
                         </ul>
+                    </li>
+
+                    <li
+                        class="treeview {{Active::checkRoute(['SalesReturnView','SalesInvoiceView','Receipt&refundView'])}}">
+                        <a href="#"><i class="fa fa-cart-arrow-down"></i><span> Sales</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
                         <ul class="treeview-menu">
-                            
+                            <li class="{{Active::checkRoute('SalesReturnView')}}"><a href="{{route('SalesReturnView')}}"><i
+                                class="fa fa-cart-arrow-down" ></i><span> Sales Return </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('SalesInvoiceView')}}"><a href="{{route('SalesInvoiceView')}}"><i
+                                class="fa fa-cart-arrow-down"></i><span> Sales Invoice </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('Receipt&refundView')}}"><a href="{{route('Receipt&refundView')}}"><i
+                                class="fa fa-cart-arrow-down"></i><span> Receipt & refund </span></a>
+                            </li>
                         </ul>
                     </li>
 
-                    <li class="{{Active::checkRoute('SalesView')}}"><a href="{{route('SalesView')}}"><i
-                                class="fa fa-cart-arrow-down"></i><span> SALES </span></a>
-                    </li>
                     <li class="{{Active::checkRoute('InventoryView')}}"><a href="{{route('InventoryView')}}"><i
                                 class="fa fa-warehouse"></i><span> INVENTORY </span></a>
+                    </li> 
+                    <li
+                        class="treeview {{Active::checkRoute(['generalledgerView','OPDReportsView','SalesandPurchaseReportsView','StockReportsView','ChallanReportsView','FinancialReportsView'])}}">
+                        <a href="#"><i class="fa fa-file-text"></i><span> REPORTS</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{{Active::checkRoute('generalledgerView')}}"><a href="{{route('generalledgerView')}}"><i
+                                class="fa fa-store" ></i><span> General Ledger Reports </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('OPDReportsView')}}"><a href="{{route('OPDReportsView')}}"><i
+                                class="fa fa-store" ></i><span> OPD Reports </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('SalesandPurchaseReportsView')}}"><a href="{{route('SalesandPurchaseReportsView')}}"><i
+                                class="fa fa-store" ></i><span> Sales and Purchase Reports </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('StockReportsView')}}"><a href="{{route('StockReportsView')}}"><i
+                                class="fa fa-store" ></i><span> Stock Reports </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('ChallanReportsView')}}"><a href="{{route('ChallanReportsView')}}"><i
+                                class="fa fa-store" ></i><span> Challan Reports </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('FinancialReportsView')}}"><a href="{{route('FinancialReportsView')}}"><i
+                                class="fa fa-store" ></i><span> Financial Reports </span></a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="{{Active::checkRoute('ReportssView')}}"><a href="{{route('ReportssView')}}"><i
-                                class="fa fa-file-text"></i><span> REPORTS </span></a>
-                    </li>
+
                     <li class="{{Active::checkRoute('AdministrationView')}}"><a href="{{route('AdministrationView')}}"><i
                                 class="fa fa-users-cog"></i><span> ADMINISTRATION </span></a>
                     </li>

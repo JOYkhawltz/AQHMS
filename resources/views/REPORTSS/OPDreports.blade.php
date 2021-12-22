@@ -2,7 +2,7 @@
 
 @section('title', $title)
 
-@section('content_title',"SALES")
+@section('content_title',"OPD Reports")
 @section('content_description',"")
 @section('breadcrumbs')
 
@@ -62,7 +62,7 @@
 </style>
 
 
-<h1>MORE SALES OPTIONS</h1>
+<h1>MORE REPORTS OPTIONS</h1>
 
 
 <button class="button button1">General </button>
