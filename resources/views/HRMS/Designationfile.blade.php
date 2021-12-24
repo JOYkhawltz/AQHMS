@@ -2,7 +2,7 @@
 
 @section('title', $title)
 
-@section('content_title',"Sales Return")
+@section('content_title',"DESIGNATION FILE")
 @section('content_description',"")
 @section('breadcrumbs')
 
@@ -23,7 +23,7 @@
         <!-- Horizontal Form -->
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">{{__('Sales Return Form')}}</h3>
+                <h3 class="box-title">{{__('PURCHASE INVOICE Form')}}</h3>
             </div>
             <form method="post" action="{{ route('patient_register') }}" class="form-horizontal">
                 {{csrf_field()}}
@@ -36,17 +36,17 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="sal./Return A/c" class="col-sm-2 control-label">{{__('sal./Return A/c')}}</label>
+                        <label for="Pur./Return A/c" class="col-sm-2 control-label">{{__('Pur./Return A/c')}}</label>
                         <div class="col-sm-10">
                             <input type="number" 
-                                class="form-control" name="sal./Return_A/c" placeholder="Enter your sale/return account no.">
+                                class="form-control" name="Pur./Return_A/c" placeholder="Enter your purchase/return account no.">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="Account" class="col-sm-2 control-label">{{__('Account')}}</label>
+                        <label for="A/C payable" class="col-sm-2 control-label">{{__('A/C payable')}}</label>
                         <div class="col-sm-10">
                             <input type="number" 
-                                class="form-control" name="Account" placeholder="Enter your account no.">
+                                class="form-control" name="A/C_payable" placeholder="Enter your payable account no.">
                         </div>
                     </div>
                     <div class="form-group">
@@ -71,31 +71,31 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="Admin #" class="col-sm-2 control-label">{{__('Admin #')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Admin" placeholder="Enter Admin no. type ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Date" class="col-sm-2 control-label">{{__('Date')}}</label>
+                        <label for="date" class="col-sm-2 control-label">{{__('Date')}}</label>
                         <div class="col-sm-10">
                             <input type="date" 
                                 class="form-control" name="date" placeholder="Enter date ">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="comments" class="col-sm-2 control-label">{{__('Comments')}}</label>
+                        <label for="comment" class="col-sm-2 control-label">{{__('Comments')}}</label>
                         <div class="col-sm-10">
                             <input type="text" 
                                 class="form-control" name="Comments" placeholder="Enter comment">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="Patient Name" class="col-sm-2 control-label">{{__('Patient Name')}}</label>
+                        <label for="Party Bill date" class="col-sm-2 control-label">{{__('Party Bill date')}}</label>
                         <div class="col-sm-10">
                             <input type="date" 
-                                class="form-control" name="Patient_Name" placeholder="Enter Patient name ">
+                                class="form-control" name="Party_Bill_date" placeholder="Enter party bill date ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Party Bill" class="col-sm-2 control-label">{{__('Party Bill #')}}</label>
+                        <div class="col-sm-10">
+                            <input type="number" 
+                                class="form-control" name="Comment" placeholder="Enter Party Bill">
                         </div>
                     </div>
                 </div>

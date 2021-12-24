@@ -2,7 +2,7 @@
 
 @section('title', $title)
 
-@section('content_title',"HRMS")
+@section('content_title',"PORDUCT MASTER FILE")
 @section('content_description',"")
 @section('breadcrumbs')
 
@@ -62,7 +62,7 @@
 </style>
 
 
-<h1>MORE HRMS OPTIONS</h1>
+<h1>MORE INVENTORY OPTIONS</h1>
 
 
 <button class="button button1">General </button>

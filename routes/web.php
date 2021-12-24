@@ -65,8 +65,19 @@ Route::post('/issuemark', ['as' => 'markIssued', 'uses' => 'MedicineController@m
 Route::get('/med-issue-save', ['as' => 'medIssueSave', 'uses' => 'MedicineController@medIssueSave'])->middleware('auth', 'pharmacist', 'lang');
 // accounts
 Route::get('/accounts', ['as' => 'accountsView', 'uses' => 'AccountsController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Chartofaccount', ['as' => 'ChartofaccountView', 'uses' => 'AccountsController@ChartOfAccount'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Journalvoucher', ['as' => 'JournalvoucherView', 'uses' => 'AccountsController@JournalVoucher'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Generatesalary', ['as' => 'GeneratesalaryView', 'uses' => 'AccountsController@GenerateSalary'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Monthlytransaction', ['as' => 'MonthlytransactionfileView', 'uses' => 'AccountsController@MonthlyTransaction'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Incometaxchallan', ['as' => 'IncometaxchallanView', 'uses' => 'AccountsController@IncomeTaxChallan'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Stocktransferchallan', ['as' => 'StocktransferchallanView', 'uses' => 'AccountsController@StockTransferChallan'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Cashbook', ['as' => 'CashbookView', 'uses' => 'AccountsController@CashBook'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Bankbook', ['as' => 'BankbookView', 'uses' => 'AccountsController@BankBook'])->middleware('auth', 'pharmacist', 'lang');
 // HRMS
-Route::get('/HRMS', ['as' => 'HRMSView', 'uses' => 'HRMSController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Dailyattendancefile', ['as' => 'DailyattendancefileView', 'uses' => 'HRMSController@DailyAttendance'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Employeemasterfile', ['as' => 'EmployeemasterfileView', 'uses' => 'HRMSController@EmployeeMaster'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Designationfile', ['as' => 'DesignationfileView', 'uses' => 'HRMSController@Designation'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Holidayfile', ['as' => 'HolidayfileView', 'uses' => 'HRMSController@Holiday'])->middleware('auth', 'pharmacist', 'lang');
 // HIMS
 Route::get('/HIMS', ['as' => 'HIMSView', 'uses' => 'HIMSController@index'])->middleware('auth', 'pharmacist', 'lang');
 // PURCHASE
@@ -79,6 +90,10 @@ Route::get('/SalesInvoice', ['as' => 'SalesInvoiceView', 'uses' => 'SalesControl
 Route::get('/Receipt&refund', ['as' => 'Receipt&refundView', 'uses' => 'SalesController@Receiptandrefund'])->middleware('auth', 'pharmacist', 'lang');
 // INVENTORY
 Route::get('/inventory', ['as' => 'InventoryView', 'uses' => 'InventoryController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/storefile', ['as' => 'StorefileView', 'uses' => 'InventoryController@StoreFile'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/productmasterfile', ['as' => 'ProductmasterfileView', 'uses' => 'InventoryController@ProductMasterFile'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/storeadjustment', ['as' => 'StoreadjustmentView', 'uses' => 'InventoryController@StoreAdjustment'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/productcategoryfile', ['as' => 'ProductcategoryfileView', 'uses' => 'InventoryController@ProductCategoryFile'])->middleware('auth', 'pharmacist', 'lang');
 // reportss
 Route::get('/GeneralLedgerReports', ['as' => 'generalledgerView', 'uses' => 'ReportssController@generalledger'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/OPDReports', ['as' => 'OPDReportsView', 'uses' => 'ReportssController@OPDReports'])->middleware('auth', 'pharmacist', 'lang');

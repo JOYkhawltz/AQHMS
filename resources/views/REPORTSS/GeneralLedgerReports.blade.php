@@ -13,59 +13,85 @@
 @endsection
 
 @section('main_content')
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
+<section class="content">
 
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
+    <div class="row">
 
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
+        <div class="col-md-12">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
 
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid red;
-}
+                    <li class="@if (!session('success')&&!session('unsuccess')||session('successnotice')) active @endif">
+                        <a href="#activity" data-toggle="tab"
+                            aria-expanded="@if (!session('unsuccess')&&!session('success')||session('successnotice')) true @else false @endif">LEDGER</a>
+                    </li>
 
-.button3:hover {
-  background-color: red;
-  color: white;
-}
-
-</style>
+                    <li class="@if (session('success')||session('unsuccess')) active @endif">
+                        <a href="#settings" data-toggle="tab"
+                            aria-expanded="@if (session('success') ||session('unsuccess')) true @else false @endif">TRIAL BALANCE</a>
+                    </li>
+                </ul>
 
 
-<h1>MORE REPORTS OPTIONS</h1>
+                
 
 
-<button class="button button1">General </button>
-<button class="button button2">Staff </button>
-<button class="button button3">Patient </button>
+              
+                        <style>
+                        .button {
+                        border: none;
+                        color: white;
+                        padding: 16px 32px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        transition-duration: 0.4s;
+                        cursor: pointer;
+                        }
+
+                        .button1 {
+                        background-color: white; 
+                        color: black; 
+                        border: 2px solid #4CAF50;
+                        }
+
+                        .button1:hover {
+                        background-color: #4CAF50;
+                        color: white;
+                        }
+
+                        .button2 {
+                        background-color: white; 
+                        color: black; 
+                        border: 2px solid #008CBA;
+                        }
+
+                        .button2:hover {
+                        background-color: #008CBA;
+                        color: white;
+                        }
+                        .button3 {
+                        background-color: white; 
+                        color: black; 
+                        border: 2px solid red;
+                        }
+
+                        .button3:hover {
+                        background-color: red;
+                        color: white;
+                        }
+
+                        </style>
+
+
+                        <h1>MORE REPORTS OPTIONS</h1>
+
+
+                        <button class="button button1">General </button>
+                        <button class="button button2">Staff </button>
+                        <button class="button button3">Patient </button>
+              </div>
 @endsection

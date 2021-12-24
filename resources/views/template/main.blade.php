@@ -250,7 +250,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
             <!-- Logo -->
             <a href="/" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini">HMS</span>
+                <span class="logo-mini">AQ</span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">DR. A.Q. KHAN </span>
             </a>
@@ -272,7 +272,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                                 <span class="mr-3" id="today"></span><span id="time"></span></p>
                         </li>
 
-                        <li class="dropdown messages-menu">
+                       {{-- <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 @if(\Session::get('locale')=='si')
                                 සිං
@@ -289,7 +289,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
 
 
                         <!-- User Account Menu -->
@@ -363,11 +363,66 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                             <i class="fas fa-tachometer-alt"></i>
                             <span> Dashboard</span></a>
                     </li>
-                    <li class="{{Active::checkRoute('accountsView')}}"><a href="{{route('accountsView')}}"><i
+
+                    <li
+                        class="treeview {{Active::checkRoute(['accountsView','ChartofaccountView','JournalvoucherView','GeneratesalaryView','MonthlytransactionfileView','IncometaxchallanView','StocktransferchallanView','CashbookView','BankbookView'])}}">
+                        <a href="#"><i class="fa fa-file-invoice-dollar"></i><span> ACCOUNTS </span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{{Active::checkRoute('accountsView')}}"><a href="{{route('accountsView')}}"><i
                                 class="fa fa-file-invoice-dollar" ></i><span>ACCOUNT</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('ChartofaccountView')}}"><a href="{{route('ChartofaccountView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>CHART OF ACCOUNT</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('JournalvoucherView')}}"><a href="{{route('JournalvoucherView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>JOURNAL VOUCHER</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('GeneratesalaryView')}}"><a href="{{route('GeneratesalaryView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>GENERATE SALARY</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('MonthlytransactionfileView')}}"><a href="{{route('MonthlytransactionfileView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>MONTHLY TRANSACTION</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('IncometaxchallanView')}}"><a href="{{route('IncometaxchallanView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>INCOME TAX CHALLAN</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('StocktransferchallanView')}}"><a href="{{route('StocktransferchallanView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>STOCK TRANSFER CHALLAN</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('CashbookView')}}"><a href="{{route('CashbookView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>CASH BOOK</span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('BankbookView')}}"><a href="{{route('BankbookView')}}"><i
+                                class="fa fa-file-invoice-dollar" ></i><span>BANK BOOK</span></a>
+                            </li>
+
+                        </ul>
                     </li>
-                    <li class="{{Active::checkRoute('HRMSView')}}"><a href="{{route('HRMSView')}}"><i
-                                class="fa fa-users" ></i><span>HRMS</span></a>
+                    <li
+                        class="treeview {{Active::checkRoute(['DailyattendancefileView','EmployeemasterfileView','DesignationfileView','HolidayfileView'])}}">
+                        <a href="#"><i class="fa fa-users"></i><span> HRMS</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{{Active::checkRoute('DailyattendancefileView')}}"><a href="{{route('DailyattendancefileView')}}"><i
+                                class="fa fa-users" ></i><span> DAILY ATTENDANCE FILE </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('EmployeemasterfileView')}}"><a href="{{route('EmployeemasterfileView')}}"><i
+                                class="fa fa-users" ></i><span> EMPLOYEE MASTER FILE </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('DesignationfileView')}}"><a href="{{route('DesignationfileView')}}"><i
+                                class="fa fa-users" ></i><span> DESIGNATION FILE </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('HolidayfileView')}}"><a href="{{route('HolidayfileView')}}"><i
+                                class="fa fa-users" ></i><span> HOLIDAY FILE </span></a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="{{Active::checkRoute('HIMSView')}}"><a href="{{route('HIMSView')}}"><i
                                 class="fa fa-briefcase-medical" ></i><span>HIMS</span></a>
@@ -375,7 +430,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
 
                     <li
                         class="treeview {{Active::checkRoute(['PurchaseReturnView','PurchaseInvoiceView','PurchaseOrderView'])}}">
-                        <a href="#"><i class="fas fa-user-injured"></i><span> PURCHASE</span>
+                        <a href="#"><i class="fa fa-store"></i><span> PURCHASE</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -413,9 +468,33 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                         </ul>
                     </li>
 
-                    <li class="{{Active::checkRoute('InventoryView')}}"><a href="{{route('InventoryView')}}"><i
+                    <li
+                        class="treeview {{Active::checkRoute(['InventoryView','StorefileView','ProductmasterfileView','StoreadjustmentView','ProductcategoryfileView'])}}">
+                        <a href="#"><i class="fa fa-warehouse"></i><span> INVENTORY</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{{Active::checkRoute('InventoryView')}}"><a href="{{route('InventoryView')}}"><i
                                 class="fa fa-warehouse"></i><span> INVENTORY </span></a>
-                    </li> 
+                            </li>
+                            <li class="{{Active::checkRoute('StorefileView')}}"><a href="{{route('StorefileView')}}"><i
+                                class="fa fa-warehouse" ></i><span>  STORE FILE  </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('ProductmasterfileView')}}"><a href="{{route('ProductmasterfileView')}}"><i
+                                class="fa fa-warehouse" ></i><span> PRODUCT MASTER FILE </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('StoreadjustmentView')}}"><a href="{{route('StoreadjustmentView')}}"><i
+                                class="fa fa-warehouse" ></i><span> STORE ADJUSTMENT </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('ProductcategoryfileView')}}"><a href="{{route('ProductcategoryfileView')}}"><i
+                                class="fa fa-warehouse" ></i><span> PRODUCT CATEGORY FILE </span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                     
                     <li
                         class="treeview {{Active::checkRoute(['generalledgerView','OPDReportsView','SalesandPurchaseReportsView','StockReportsView','ChallanReportsView','FinancialReportsView'])}}">
                         <a href="#"><i class="fa fa-file-text"></i><span> REPORTS</span>
@@ -425,22 +504,22 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                         </a>
                         <ul class="treeview-menu">
                             <li class="{{Active::checkRoute('generalledgerView')}}"><a href="{{route('generalledgerView')}}"><i
-                                class="fa fa-store" ></i><span> General Ledger Reports </span></a>
+                                class="fa fa-file-text" ></i><span> General Ledger Reports </span></a>
                             </li>
                             <li class="{{Active::checkRoute('OPDReportsView')}}"><a href="{{route('OPDReportsView')}}"><i
-                                class="fa fa-store" ></i><span> OPD Reports </span></a>
+                                class="fa fa-file-text" ></i><span> OPD Reports </span></a>
                             </li>
                             <li class="{{Active::checkRoute('SalesandPurchaseReportsView')}}"><a href="{{route('SalesandPurchaseReportsView')}}"><i
-                                class="fa fa-store" ></i><span> Sales and Purchase Reports </span></a>
+                                class="fa fa-file-text" ></i><span> Sales and Purchase Reports </span></a>
                             </li>
                             <li class="{{Active::checkRoute('StockReportsView')}}"><a href="{{route('StockReportsView')}}"><i
-                                class="fa fa-store" ></i><span> Stock Reports </span></a>
+                                class="fa fa-file-text" ></i><span> Stock Reports </span></a>
                             </li>
                             <li class="{{Active::checkRoute('ChallanReportsView')}}"><a href="{{route('ChallanReportsView')}}"><i
-                                class="fa fa-store" ></i><span> Challan Reports </span></a>
+                                class="fa fa-file-text" ></i><span> Challan Reports </span></a>
                             </li>
                             <li class="{{Active::checkRoute('FinancialReportsView')}}"><a href="{{route('FinancialReportsView')}}"><i
-                                class="fa fa-store" ></i><span> Financial Reports </span></a>
+                                class="fa fa-file-text" ></i><span> Financial Reports </span></a>
                             </li>
                         </ul>
                     </li>
@@ -449,193 +528,23 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                                 class="fa fa-users-cog"></i><span> ADMINISTRATION </span></a>
                     </li>
                     
+                    {{-- more dropdown code here --}}
 
-
-                    @if($user_type!='Pharmacist')
-                    {{--patient--}}
-                    <li
-                        class="treeview {{Active::checkRoute(['patient','register_in_patient_view','searchPatient','searchData','discharge_inpatient','patientProfileIntro','patientProfile'])}}">
-                        <a href="#"><i class="fas fa-user-injured"></i><span> Patient</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('patient')}}"><a href="{{route('patient')}}"></i><i
-                                        class="fas fa-user-plus" aria-hidden="true"></i>
-                                    Register New</a></li>
-
-                            <li class="{{Active::checkRoute(['searchPatient','searchData'])}}"><a
-                                    href="{{route('searchPatient')}}"></i><i class="fas fa-search"
-                                        aria-hidden="true"></i> Search Patient</a>
-                            </li>
-
-                            <li class="{{Active::checkRoute(['patientProfileIntro','patientProfile'])}}"><a
-                                    href="{{route('patientProfileIntro')}}"></i><i class="fas fa-id-card"
-                                        aria-hidden="true"></i> Patient Profile</a>
-                            </li>
-
-                            {{--register in patient--}}
-                            <li class="{{Active::checkRoute('register_in_patient_view')}}"><a
-                                    href="{{route('register_in_patient_view')}}"><i class="fas fa-user-plus"
-                                    area-hidden="true"></i><span> Register In Patient</span></a>
-                            </li>
-
-                            @if($user_type=='Doctor' || $user_type=='Admin')
-                            {{--discharge in patient--}}
-                            <li class="{{Active::checkRoute('discharge_inpatient')}}"><a
-                                    href="{{route('discharge_inpatient')}}"><i class="fa fa-hospital-o"
-                                        area-hidden="true">
-                                    </i><span>Discharge In Patient</span></a>
-                            </li>
-                            @endif
-
-                        </ul>
-                    </li>
-                    @endif
-                    @if($user_type!='Pharmacist')
-                    {{--create channel--}}
-                    <li class="{{Active::checkRoute('create_channel_view')}}">
-                        <a href="{{route('create_channel_view')}}">
+                   
+                     
+                     {{-- <li>
+                        <a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank">
                             <i class="fas fa-folder-plus"></i>
-                            <span> Create Appoinment</span>
+                            <span> Template</span>
                         </a>
-                    </li>
-                    @endif
-                    @if($user_type=='Admin' || $user_type=='Doctor')
-                    {{--check patient--}}
-                    <li class="{{Active::checkRoute('check_patient_view')}}"><a
-                            href="{{route('check_patient_view')}}"><i class="fas fa-procedures"></i>
-                            <span> Check Patient</span></a></li>
-                    @endif
-
-                    @if($user_type=='Pharmacist' || $user_type=='Admin')
-                    {{--Issue Medicine--}}
-                    <li class="{{Active::checkRoute('issueMedicineView')}}"><a href="{{route('issueMedicineView')}}"><i
-                                class="fa fa-plus-square"></i><span>Issue Medicine</span></a></li>
-                    @endif
-
-                    <li class="treeview {{Active::checkRoute(['attendmore','myattend'])}}">
-                        <a href="#"><i class="fas fa-calendar-check"></i></i><span> Attendance</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('myattend')}}"><a href="{{route('myattend')}}"><i
-                                        class="fas fa-calendar-day" aria-hidden="true"></i>&nbsp; My
-                                    Attendance</a></li>
-                            @if($user_type=='Admssin')
-                            <li class="{{Active::checkRoute('attendmore')}}"><a href="{{route('attendmore')}}"><i
-                                        class="fas fa-plus-square" aria-hidden="true"></i>&nbsp; More</a></li>
-                            @endif
-                        </ul>
-                    </li>
-
-                    @if($user_type=='Admin')
-                    {{-- Users Operations --}}
-
-                    <li class="{{Active::checkRoute(['newuser','regfinger','resetuser'])}} treeview">
-                        <a href="#"><i class="fas fa-users-cog"></i><span> Users</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('newuser')}}"><a href="{{route('newuser')}}"><i
-                                        class="fa fa-user-plus" aria-hidden="true"></i>New
-                                    User</a></li>
-                            <li class="{{Active::checkRoute('regfinger')}}"><a href="{{route('regfinger')}}"><i
-                                        class="fa fa-fingerprint" aria-hidden="true"></i>Register Fingerprint</a></li>
-                            <li class="{{Active::checkRoute('resetuser')}}"><a href="{{route('resetuser')}}"><i
-                                        class="fa fa-user-edit" aria-hidden="true"></i>Reset
-                                    User</a></li>
-                        </ul>
-                    </li>
-                    @endif
-
-                    {{-- Profile --}}
-
-                    <li class="{{Active::checkRoute('profile')}}"><a href="{{route('profile')}}"><i
-                                class="fas fa-user"></i><span> Profile</span></a></li>
-
-                    {{-- Wards --}}
-
-                    @if($user_type!="Pharmacist")
-                    <li class="{{Active::checkRoute('wards')}}"><a href="{{route('wards')}}"><i
-                                class="fas fa-warehouse"></i>
-                            <span>&nbsp;Wards</span></a></li>
-                    @endif
-
-                    @if($user_type=="Admin")
-                    {{--add notices--}}
-                    <li class="{{Active::checkRoute('createnoticeview')}}">
-                        <a href="{{route('createnoticeview')}}">
-                            <i class="fas fa-envelope-open-text"></i>
-                            <span> Notices</span>
-                        </a>
-                    </li>
-                    @endif
-
-                    @if($user_type=="Admin"||$user_type=="Doctor")
-                    {{--statistics--}}
-                    <li class="{{Active::checkRoute(['stats','stats_old'])}}">
-                        <a href="{{route('stats')}}">
-                            <i class="fas fa-chart-line"></i></i>
-                            <span> Statistics</span>
-                        </a>
-                    </li>
-                    @endif
-
-
-                    {{--report generation--}}
-                    <li
-                        class="treeview {{Active::checkRoute(['inPatientReport','inPatientReportData','clinic_reports','mob_clinic_report','mon_stat_report','out_p_report','attendance_report'])}}">
-                        <a href="#">
-                            <i class="fas fa-sticky-note"></i>
-                            <span> Report Generation</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            @if($user_type=="Admin"||$user_type=="Doctor")
-                            <li class="{{Active::checkRoute('clinic_reports')}}"><a
-                                    href="{{route('clinic_reports')}}"><i class="fa fa-stethoscope"
-                                        aria-hidden="true"></i> Clinic Report</a></li>
-                            @endif
-
-                            @if($user_type=="Admin"||$user_type=="Doctor")
-                            <li class="{{Active::checkRoute('mon_stat_report')}}"><a
-                                    href="{{route('mon_stat_report')}}"><i class="fa fa-sticky-note"
-                                        aria-hidden="true"></i> Monthly Statistic Report</a></li>
-                            @endif
-
-
-                            <li class="{{Active::checkRoute(['inPatientReport','inPatientReportData'])}}"><a
-                                    href="{{route('inPatientReport')}}"><i class="fa fa-hospital-o"
-                                        area-hidden="true"></i><span>In Patient Stats</span></a>
-                            </li>
-
-                            <li class="{{Active::checkRoute('attendance_report')}}"><a
-                                    href="{{route('attendance_report')}}"><i class="fa fa-clipboard
-                                        aria-hidden=" true"></i> Attendance Report</a></li>
-                        </ul>
-                    </li>
-                     /* templete line here */
-
+                    </li> --}}
                 </ul>
 
                 <!-- /.sidebar-menu -->
             </section>
             <!-- /.sidebar -->
         </aside>
-        /* <li>
-                        <a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank">
-                            <i class="fas fa-folder-plus"></i>
-                            <span> Template</span>
-                        </a>
-                    </li> */ 
+        /*  */ 
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
