@@ -101,8 +101,16 @@ Route::get('/SalesandPurchaseReports', ['as' => 'SalesandPurchaseReportsView', '
 Route::get('/StockReports', ['as' => 'StockReportsView', 'uses' => 'ReportssController@StockReports'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/ChallanReports', ['as' => 'ChallanReportsView', 'uses' => 'ReportssController@ChallanReports'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/FinancialReports', ['as' => 'FinancialReportsView', 'uses' => 'ReportssController@FinancialReports'])->middleware('auth', 'pharmacist', 'lang');
-// administration
+// administration 
 Route::get('/administration', ['as' => 'AdministrationView', 'uses' => 'AdministrationController@index'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Labtest', ['as' => 'LabtestView', 'uses' => 'AdministrationController@LabTest'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Therapyregistration', ['as' => 'TherapyregistrationView', 'uses' => 'AdministrationController@TherapyRegistration'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Therapeuticservices', ['as' => 'TherapeuticservicesView', 'uses' => 'AdministrationController@TherapeuticServices'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Admissiondetails', ['as' => 'AdmissiondetailsView', 'uses' => 'AdministrationController@AdmissionDetails'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Dayclosing', ['as' => 'DayclosingView', 'uses' => 'AdministrationController@DayClosing'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Ambulancereceipt', ['as' => 'AmbulancereceiptView', 'uses' => 'AdministrationController@AmbulanceReceipt'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/OPDslip', ['as' => 'OPDslipView', 'uses' => 'AdministrationController@OPDSlip'])->middleware('auth', 'pharmacist', 'lang');
+Route::get('/Labtestapproval', ['as' => 'LabtestapprovalView', 'uses' => 'AdministrationController@LabTestApproval'])->middleware('auth', 'pharmacist', 'lang');
 // Check Patient Routes
 Route::get('/checkpatient', ['as' => 'check_patient_view', 'uses' => 'PatientController@checkPatientView'])->middleware('auth', 'doctor', 'lang');
 Route::post('/validateAppNum', ['as' => 'validateAppNum', 'uses' => 'PatientController@validateAppNum'])->middleware('auth', 'doctor', 'lang');

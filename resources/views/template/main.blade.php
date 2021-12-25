@@ -313,7 +313,9 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                                 </li>
                                 <!-- Menu Body -->
                                 <li class="user-body">
-                                    <h5 class="text-center">{{$outlet}}</h5>
+                                <h5 class="text-center"> DR ABDUL QADIR KHAN HOSPITAL</h5>
+                                <!-- CHANGES HERE -->
+                                <!-- <h5 class="text-center">{{$outlet}}</h5> -->
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
@@ -358,7 +360,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                 <!-- Sidebar Menu -->
 
                 <ul class="sidebar-menu" data-widget="tree">
-                    <li class="header">Main Menu</li>
+                    <li class="header"> Main Menu</li>
                     <li class="{{Active::checkRoute('dash')}}"><a href="{{route('dash')}}">
                             <i class="fas fa-tachometer-alt"></i>
                             <span> Dashboard</span></a>
@@ -402,6 +404,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
 
                         </ul>
                     </li>
+
                     <li
                         class="treeview {{Active::checkRoute(['DailyattendancefileView','EmployeemasterfileView','DesignationfileView','HolidayfileView'])}}">
                         <a href="#"><i class="fa fa-users"></i><span> HRMS</span>
@@ -424,6 +427,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                             </li>
                         </ul>
                     </li>
+
                     <li class="{{Active::checkRoute('HIMSView')}}"><a href="{{route('HIMSView')}}"><i
                                 class="fa fa-briefcase-medical" ></i><span>HIMS</span></a>
                     </li>
@@ -524,9 +528,44 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                         </ul>
                     </li>
 
-                    <li class="{{Active::checkRoute('AdministrationView')}}"><a href="{{route('AdministrationView')}}"><i
+                    <li
+                        class="treeview {{Active::checkRoute(['AdministrationView','LabtestView','TherapyregistrationView','TherapeuticservicesView','AdmissiondetailsView','DayclosingView','AmbulancereceiptView','OPDslipView','LabtestapprovalView'])}}">
+                        <a href="#"><i class="fa fa-users-cog"></i><span> ADMINISTRATION</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{{Active::checkRoute('AdministrationView')}}"><a href="{{route('AdministrationView')}}"><i
                                 class="fa fa-users-cog"></i><span> ADMINISTRATION </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('LabtestView')}}"><a href="{{route('LabtestView')}}"><i
+                                class="fa fa-users-cog"></i><span> LAB TEST </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('TherapyregistrationView')}}"><a href="{{route('TherapyregistrationView')}}"><i
+                                class="fa fa-users-cog"></i><span> THERAPY REGISTRATION </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('TherapeuticservicesView')}}"><a href="{{route('TherapeuticservicesView')}}"><i
+                                class="fa fa-users-cog"></i><span> THERAPEUTIC SERVICES </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('AdmissiondetailsView')}}"><a href="{{route('AdmissiondetailsView')}}"><i
+                                class="fa fa-users-cog"></i><span> ADMISSION DETAIL </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('DayclosingView')}}"><a href="{{route('DayclosingView')}}"><i
+                                class="fa fa-users-cog"></i><span> DAY CLOSING </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('AmbulancereceiptView')}}"><a href="{{route('AmbulancereceiptView')}}"><i
+                                class="fa fa-users-cog"></i><span> AMBULANCE RECEIPT </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('OPDslipView')}}"><a href="{{route('OPDslipView')}}"><i
+                                class="fa fa-users-cog"></i><span> OPD SLIP </span></a>
+                            </li>
+                            <li class="{{Active::checkRoute('LabtestapprovalView')}}"><a href="{{route('LabtestapprovalView')}}"><i
+                                class="fa fa-users-cog"></i><span> LAB TEST APPROVAL </span></a>
+                            </li> 
+                        </ul>
                     </li>
+
                     
                     {{-- more dropdown code here --}}
 

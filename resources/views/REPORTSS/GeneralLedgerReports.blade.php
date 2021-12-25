@@ -20,7 +20,7 @@
 
         <div class="col-md-12">
             <div class="nav-tabs-custom">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-pills">
 
                     <li class="@if (!session('success')&&!session('unsuccess')||session('successnotice')) active @endif">
                         <a href="#activity" data-toggle="tab"
