@@ -14,89 +14,69 @@
 
 @section('main_content')
 <script src="/js/WebCam/webcam.js"></script>
+<div class="container" style="padding-right:100px;">
+  <h2>Filterable Table</h2> 
+  <input class="p200 form-control " id="myInput" type="TEXT" placeholder="Search..">
+  <br>
+  <div class="table-responsive ">          
+  <table class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+      <tr style="background-color: lightblue;">
+        <th>HOLIDAY</th>
+        <th>DATE</th>
+        <th>DAY</th>
+        <th>REMARKS/REASON</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>YES</td>
+        <td>DEC 2021</td>
+        <td>MONDAY</td>
+        <td>ASDASD</td>
+      </tr>
+      <tr>
+        <td>NO</td>
+        <td>DEC 2022</td>
+        <td>TUESDAY</td>
+        <td>QWEQWE</td>
+      </tr>
+      <tr>
+        <td>NO</td>
+        <td>DEC 2023</td>
+        <td>WEDNESDAY</td>
+        <td>ZXCZXC</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
 
-<div class="row">
-    <!-- right column -->
+
+
+
+<!-- <div class="row">
+     right column 
     <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <!-- Horizontal Form -->
-        <div class="box box-info">
-            <div class="box-header with-border">
-                <h3 class="box-title">{{__('PURCHASE INVOICE Form')}}</h3>
+        <div class="col-md-10">
+             Horizontal Form 
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">{{__('PURCHASE INVOICE Form')}}</h3>
+                </div>     
             </div>
-            <form method="post" action="{{ route('patient_register') }}" class="form-horizontal">
-                {{csrf_field()}}
-                <div class="box-body">
-                    <div class="form-group">
-                        <label for="transaction" class="col-sm-2 control-label">{{__('Transaction #')}} <span
-                                style="color:red">*</span></label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" name="transaction" placeholder="Enter transaction number">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Pur./Return A/c" class="col-sm-2 control-label">{{__('Pur./Return A/c')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Pur./Return_A/c" placeholder="Enter your purchase/return account no.">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="A/C payable" class="col-sm-2 control-label">{{__('A/C payable')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="A/C_payable" placeholder="Enter your payable account no.">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Inpatient zaka A/C" class="col-sm-2 control-label">{{__('Inpatient zaka A/C')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Inpatient_zaka_A/C" placeholder="Enter inpatient zaka account no.  ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Inp. charge Med" class="col-sm-2 control-label">{{__('Inp. charge Med')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Inp.charge_Med" placeholder="Enter inpatient charge medical ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Transaction Type" class="col-sm-2 control-label">{{__('Transaction Type')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Transaction_Type" placeholder="Enter transaction type ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="col-sm-2 control-label">{{__('Date')}}</label>
-                        <div class="col-sm-10">
-                            <input type="date" 
-                                class="form-control" name="date" placeholder="Enter date ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="comment" class="col-sm-2 control-label">{{__('Comments')}}</label>
-                        <div class="col-sm-10">
-                            <input type="text" 
-                                class="form-control" name="Comments" placeholder="Enter comment">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Party Bill date" class="col-sm-2 control-label">{{__('Party Bill date')}}</label>
-                        <div class="col-sm-10">
-                            <input type="date" 
-                                class="form-control" name="Party_Bill_date" placeholder="Enter party bill date ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Party Bill" class="col-sm-2 control-label">{{__('Party Bill #')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Comment" placeholder="Enter Party Bill">
-                        </div>
-                    </div>
-                </div>
+        </div>
+</div> -->
 @endsection

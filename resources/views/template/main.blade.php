@@ -3,7 +3,7 @@
 $name = ucwords($user->name);
 $user_type = ucfirst($user->user_type);
 $image_path = $user->img_path;
-$outlet = 'Rural Ayruvedic Hospital Kesbawa';
+$outlet = 'DR Abdul Qadir Khan Hospital';
 \App::setLocale(Session::get('locale'));
 ?>
 
@@ -313,9 +313,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                                 </li>
                                 <!-- Menu Body -->
                                 <li class="user-body">
-                                <h5 class="text-center"> DR ABDUL QADIR KHAN HOSPITAL</h5>
-                                <!-- CHANGES HERE -->
-                                <!-- <h5 class="text-center">{{$outlet}}</h5> -->
+                                 <h5 class="text-center">{{$outlet}}</h5>
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
@@ -368,7 +366,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
 
                     <li
                         class="treeview {{Active::checkRoute(['accountsView','ChartofaccountView','JournalvoucherView','GeneratesalaryView','MonthlytransactionfileView','IncometaxchallanView','StocktransferchallanView','CashbookView','BankbookView'])}}">
-                        <a href="#"><i class="fa fa-file-invoice-dollar"></i><span> ACCOUNTS </span>
+                        <a href="#"><i class="fas fa-user"></i><span> ACCOUNTS</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -434,7 +432,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
 
                     <li
                         class="treeview {{Active::checkRoute(['PurchaseReturnView','PurchaseInvoiceView','PurchaseOrderView'])}}">
-                        <a href="#"><i class="fa fa-store"></i><span> PURCHASE</span>
+                        <a href="#"><i class="fas fa-store-alt"></i><span> PURCHASE</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -501,7 +499,7 @@ $outlet = 'Rural Ayruvedic Hospital Kesbawa';
                      
                     <li
                         class="treeview {{Active::checkRoute(['generalledgerView','OPDReportsView','SalesandPurchaseReportsView','StockReportsView','ChallanReportsView','FinancialReportsView'])}}">
-                        <a href="#"><i class="fa fa-file-text"></i><span> REPORTS</span>
+                        <a href="#"><i class="fas fa-flag-checkered "></i><span> REPORTS</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>

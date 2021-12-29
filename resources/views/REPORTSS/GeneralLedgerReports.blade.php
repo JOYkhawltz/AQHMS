@@ -20,78 +20,40 @@
 
         <div class="col-md-12">
             <div class="nav-tabs-custom">
-                <ul class="nav nav-pills">
-
-                    <li class="@if (!session('success')&&!session('unsuccess')||session('successnotice')) active @endif">
-                        <a href="#activity" data-toggle="tab"
-                            aria-expanded="@if (!session('unsuccess')&&!session('success')||session('successnotice')) true @else false @endif">LEDGER</a>
-                    </li>
-
-                    <li class="@if (session('success')||session('unsuccess')) active @endif">
-                        <a href="#settings" data-toggle="tab"
-                            aria-expanded="@if (session('success') ||session('unsuccess')) true @else false @endif">TRIAL BALANCE</a>
-                    </li>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a data-toggle="pill" href="#ledger">LEDGER</a></li>
+                    <li><a data-toggle="pill" href="#trial_balance">TRIAL BALANCE</a></li>
+                    <li><a data-toggle="pill" href="#audit_trial">AUDIT TRIAL</a></li>
+                    <li><a data-toggle="pill" href="#account_summary">A/C. SUMMARY</a></li>
+                    <li><a data-toggle="pill" href="#account_activity">A/C. ACTIVITY </a></li>
                 </ul>
 
 
-                
+                <div class="tab-content">
+                    <div id="ledger" class="tab-pane fade in active">
+                        <h2>LEDGER</h2>
+                        <p>hi this ledger sheet </p>
+                    </div>
+                    <div id="trial_balance" class="tab-pane fade">
+                    <h2>TRIAL BALANCE</h2>
+                    <p>This is trial balance sheet</p>
+                    </div>
+                    <div id="audit_trial" class="tab-pane fade">
+                    <h2>AUDIT TRIAL</h2>
+                    <p>This is audit trial balance sheet</p>
+                    </div>
+                    <div id="account_summary" class="tab-pane fade">
+                        <h2>ACCOUNT SUMMARY</h2>
+                        <p>This is account summary</P>
+                    </div>
+                    <div id="account_activity" class="tab-pane fade">
+                        <h2>ACCOUNT ACTIVITY</h2>
+                        <p>This is account activity </P>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div> 
 
-
-              
-                        <style>
-                        .button {
-                        border: none;
-                        color: white;
-                        padding: 16px 32px;
-                        text-align: center;
-                        text-decoration: none;
-                        display: inline-block;
-                        font-size: 16px;
-                        margin: 4px 2px;
-                        transition-duration: 0.4s;
-                        cursor: pointer;
-                        }
-
-                        .button1 {
-                        background-color: white; 
-                        color: black; 
-                        border: 2px solid #4CAF50;
-                        }
-
-                        .button1:hover {
-                        background-color: #4CAF50;
-                        color: white;
-                        }
-
-                        .button2 {
-                        background-color: white; 
-                        color: black; 
-                        border: 2px solid #008CBA;
-                        }
-
-                        .button2:hover {
-                        background-color: #008CBA;
-                        color: white;
-                        }
-                        .button3 {
-                        background-color: white; 
-                        color: black; 
-                        border: 2px solid red;
-                        }
-
-                        .button3:hover {
-                        background-color: red;
-                        color: white;
-                        }
-
-                        </style>
-
-
-                        <h1>MORE REPORTS OPTIONS</h1>
-
-
-                        <button class="button button1">General </button>
-                        <button class="button button2">Staff </button>
-                        <button class="button button3">Patient </button>
-              </div>
+</section>            
 @endsection
