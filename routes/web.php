@@ -64,7 +64,6 @@ Route::get('/issue/{presid}', ['as' => 'issue', 'uses' => 'MedicineController@is
 Route::post('/issuemark', ['as' => 'markIssued', 'uses' => 'MedicineController@markIssued'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/med-issue-save', ['as' => 'medIssueSave', 'uses' => 'MedicineController@medIssueSave'])->middleware('auth', 'pharmacist', 'lang');
 // accounts
-Route::get('/accounts', ['as' => 'accountsView', 'uses' => 'AccountsController@index'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Chartofaccount', ['as' => 'ChartofaccountView', 'uses' => 'AccountsController@ChartOfAccount'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Journalvoucher', ['as' => 'JournalvoucherView', 'uses' => 'AccountsController@JournalVoucher'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Generatesalary', ['as' => 'GeneratesalaryView', 'uses' => 'AccountsController@GenerateSalary'])->middleware('auth', 'pharmacist', 'lang');

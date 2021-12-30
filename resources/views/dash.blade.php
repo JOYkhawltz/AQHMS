@@ -16,8 +16,8 @@
 @section('main_content')
 
 <div class="row">
-    <div class="m-0 col-md-12">
-        <div class="pl-0 col-md-3 col-sm-6 col-xs-12">
+    <div class="p-0 m-0 col-md-12">
+        <div class=" col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
                 <span class="info-box-icon bg-aqua"><i class="fas fa-user-md"></i></span>
                 <div class="info-box-content">
@@ -59,7 +59,7 @@
             <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-md-3 pr-0 col-sm-6 col-xs-12">
+        <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
                 <span class="info-box-icon bg-yellow"><i class="fas fa-user-injured"></i></span>
 

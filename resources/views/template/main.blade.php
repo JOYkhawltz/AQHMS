@@ -372,9 +372,6 @@ $outlet = 'DR Abdul Qadir Khan Hospital';
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('accountsView')}}"><a href="{{route('accountsView')}}"><i
-                                class="fa fa-file-invoice-dollar" ></i><span>ACCOUNT</span></a>
-                            </li>
                             <li class="{{Active::checkRoute('ChartofaccountView')}}"><a href="{{route('ChartofaccountView')}}"><i
                                 class="fa fa-file-invoice-dollar" ></i><span>CHART OF ACCOUNT</span></a>
                             </li>

@@ -7,12 +7,12 @@
     <div class="row  h-100 justify-content-center align-items-center">
         <div class="col-8 bg-white border border-white p-5 m-5 rounded">
             <div class="row">
-                <div class="col-6">
+                <div class="col-xs-12 col-md-6 col-lg-6">
                     <img class="text-center mt-5 mx-auto d-block border-0 img-thumbnail" style="border-radius:100%"
                         src="./images/logo.png" alt="">
                     <h3 class="mt-2 text-center mb-5">DR AQ HOSPITAL</h3>
                 </div>
-                <div class="col-6 mt-2">
+                <div class="col-xs-12 col-md-6 col-lg-6 mt-2">
                     <form method="post" action="{{ route('login') }}">
                             @csrf
                         <h3 class="text-center mb-5">System Login</h3>
