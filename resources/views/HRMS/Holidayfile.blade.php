@@ -14,42 +14,64 @@
 
 @section('main_content')
 <script src="/js/WebCam/webcam.js"></script>
-<div class="container" style="padding-right:100px;">
-  <h2>Filterable Table</h2> 
-  <input class="p200 form-control " id="myInput" type="TEXT" placeholder="Search..">
-  <br>
-  <div class="table-responsive ">          
-  <table class="table table-striped table-bordered table-hover table-condensed">
-    <thead>
-      <tr style="background-color: lightblue;">
-        <th>HOLIDAY</th>
-        <th>DATE</th>
-        <th>DAY</th>
-        <th>REMARKS/REASON</th>
-      </tr>
-    </thead>
-    <tbody id="myTable">
-      <tr>
-        <td>YES</td>
-        <td>DEC 2021</td>
-        <td>MONDAY</td>
-        <td>ASDASD</td>
-      </tr>
-      <tr>
-        <td>NO</td>
-        <td>DEC 2022</td>
-        <td>TUESDAY</td>
-        <td>QWEQWE</td>
-      </tr>
-      <tr>
-        <td>NO</td>
-        <td>DEC 2023</td>
-        <td>WEDNESDAY</td>
-        <td>ZXCZXC</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+<div class="row">
+    <!-- right column -->
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <!-- Horizontal Form -->
+         <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{__('HOLIDAY FILE Form')}}</h3>
+            </div>
+            <form method="post" action="{{ route('HolidayfileView') }}" class="form-horizontal">
+                {{csrf_field()}}
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="search" class="col-sm-2 control-label">{{__('SEARCH')}} <span
+                                style="color:red">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="TEXT" class="form-control" id="myInput"  name="search" placeholder="Search..">
+                        </div>
+                    </div>
+                    <!-- <div class="container" style="padding-right:100px;">
+                      <h2>Filterable Table</h2> 
+                      <input class="p200 form-control " id="myInput" type="TEXT" placeholder="Search..">
+                      <br> -->
+                    <div class="table-responsive ">          
+                    <table class="table table-striped table-bordered table-hover table-condensed">
+                      <thead>
+                        <tr style="background-color: lightblue;">
+                          <th>HOLIDAY</th>
+                          <th>DATE</th>
+                          <th>DAY</th>
+                          <th>REMARKS/REASON</th>
+                        </tr>
+                      </thead>
+                      <tbody id="myTable">
+                        <tr>
+                          <td>YES</td>
+                          <td>DEC 2021</td>
+                          <td>MONDAY</td>
+                          <td>ASDASD</td>
+                        </tr>
+                        <tr>
+                          <td>NO</td>
+                          <td>DEC 2022</td>
+                          <td>TUESDAY</td>
+                          <td>QWEQWE</td>
+                        </tr>
+                        <tr>
+                          <td>NO</td>
+                          <td>DEC 2023</td>
+                          <td>WEDNESDAY</td>
+                          <td>ZXCZXC</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
+          </div>
+    </div>
 </div>
 
 <script>

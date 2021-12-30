@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/iezqafmlc572/public_html/AQHMS
+ - export DEPLOYPATH=/home/iezqafmlc572/public_html/aq.universaldigitalsolution.com
  - /bin/cp -R * $DEPLOYPATH

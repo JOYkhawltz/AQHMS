@@ -23,80 +23,54 @@
         <!-- Horizontal Form -->
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">{{__('PURCHASE INVOICE Form')}}</h3>
+                <h3 class="box-title">{{__('DESIGNATION FILE Form')}}</h3>
             </div>
-            <form method="post" action="{{ route('patient_register') }}" class="form-horizontal">
+            <form method="post" action="{{ route('DesignationfileView') }}" class="form-horizontal">
                 {{csrf_field()}}
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="transaction" class="col-sm-2 control-label">{{__('Transaction #')}} <span
+                        <label for="id" class="col-sm-2 control-label">{{__('Id')}} <span
                                 style="color:red">*</span></label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name="transaction" placeholder="Enter transaction number">
+                            <input type="number" class="form-control" name="id" placeholder="Auto generate">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="Pur./Return A/c" class="col-sm-2 control-label">{{__('Pur./Return A/c')}}</label>
+                        <label for="name" class="col-sm-2 control-label">{{__('Name')}} <span
+                                style="color:red">*</span></label>
                         <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Pur./Return_A/c" placeholder="Enter your purchase/return account no.">
+                            <input type="text" class="form-control" name="name" placeholder="Enter designation name">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="A/C payable" class="col-sm-2 control-label">{{__('A/C payable')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="A/C_payable" placeholder="Enter your payable account no.">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Inpatient zaka A/C" class="col-sm-2 control-label">{{__('Inpatient zaka A/C')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Inpatient_zaka_A/C" placeholder="Enter inpatient zaka account no.  ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Inp. charge Med" class="col-sm-2 control-label">{{__('Inp. charge Med')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Inp.charge_Med" placeholder="Enter inpatient charge medical ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Transaction Type" class="col-sm-2 control-label">{{__('Transaction Type')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Transaction_Type" placeholder="Enter transaction type ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="col-sm-2 control-label">{{__('Date')}}</label>
-                        <div class="col-sm-10">
-                            <input type="date" 
-                                class="form-control" name="date" placeholder="Enter date ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="comment" class="col-sm-2 control-label">{{__('Comments')}}</label>
-                        <div class="col-sm-10">
-                            <input type="text" 
-                                class="form-control" name="Comments" placeholder="Enter comment">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Party Bill date" class="col-sm-2 control-label">{{__('Party Bill date')}}</label>
-                        <div class="col-sm-10">
-                            <input type="date" 
-                                class="form-control" name="Party_Bill_date" placeholder="Enter party bill date ">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Party Bill" class="col-sm-2 control-label">{{__('Party Bill #')}}</label>
-                        <div class="col-sm-10">
-                            <input type="number" 
-                                class="form-control" name="Comment" placeholder="Enter Party Bill">
-                        </div>
+                    <div class="table-responsive ">          
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr style="background-color: lightblue;">
+                                    <th>ID</th>
+                                    <th>DESCRIPTION</th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTable">
+                                <tr>
+                                    <td>001</td>
+                                    <td>MANAGER</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>IT OFFICER</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>MEDICAL OFFICER</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+        </div>
+    </div>
+</div>
+                    
 @endsection
