@@ -29,10 +29,10 @@
                 {{csrf_field()}}
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="id" class="col-sm-2 control-label">{{__('Id')}} <span
+                        <label for="disabledInput" class="col-sm-2 control-label">{{__('Id')}} <span
                                 style="color:red">*</span></label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name="id" placeholder="Auto generate">
+                            <input type="number" class="form-control" id="disabledInput" placeholder="Auto generate" disabled>
                         </div>
                     </div>
                     <div class="form-group">
