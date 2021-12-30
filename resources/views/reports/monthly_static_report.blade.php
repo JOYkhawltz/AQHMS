@@ -17,7 +17,7 @@
     $name = $user->name;
     $user_type = $user->user_type;
     $image_path = $user->img_path;
-    $outlet = 'Rural Ayruvedic Hospital Kesbawa'?>
+    $outlet = 'DR AQ HOSPITAL'?>
 
 <style>
     @media print {
@@ -45,15 +45,15 @@
 
                     <div class="box-body">
 
-                        <h2 align="center">{{__('Ayruvedic Department')}}</h2>
+                        <h2 align="center">{{__('Department')}}</h2>
                         <h4 align="center">{{__('Monthly Statics Report')}}</h4>
 
                         <br>
-                        {{__('Institute')}} : {{__('Rural Ayruvedic Hospital Kesbawa')}}
+                        {{__('Institute')}} : {{__('DR AQ HOSPITAL')}}
                         <div class="pull-right">
                             <?php echo date('Y F'); ?>
                             <br>
-                            {{__('Kesbewa District')}}
+                            {{__('KARACHI BRANCH')}}
                         </div>
 
 

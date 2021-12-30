@@ -28,7 +28,7 @@ use App\Patients;
         <div class="col-md-3"></div>
         <div class="box-header with-border">
             <h2 class="text-center text-upppercase">
-                AYRUVEDA HOSPITAL KESBAWA<br>
+            DR AQ HOSPITAL<br>
                 <small class="small">Discharge Reciept</small>
             </h2>
             <br>

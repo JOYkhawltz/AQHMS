@@ -42,7 +42,7 @@
             <br>
 
             <div class="box" id="HTMLtoPDF">
-                <h2 align="center">CENTRAL HOSPITAL OF AYRVEDA</h2>
+                <h2 align="center">CENTRAL HOSPITAL OF AQ</h2>
                 <h4 align="center">Clinic Report</h4>
 
                 <br>
