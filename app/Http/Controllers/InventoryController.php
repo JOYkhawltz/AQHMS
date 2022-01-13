@@ -7,12 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class InventoryController extends Controller
 {
-    public function index()
-    {
-        $user = Auth::user();
-        return view('INVENTORY.inventory',
-        ['title' => "inventory"]);
-    }
     public function StoreFile()
     {
         $user = Auth::user();

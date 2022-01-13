@@ -30,7 +30,7 @@
                         <label for="search" class="col-sm-2 control-label">{{__('SEARCH')}} <span
                                 style="color:red">*</span></label>
                         <div class="col-sm-10">
-                            <input type="TEXT" class="form-control" id="myInput"  name="search" placeholder="Search..">
+                            <input type="text" class="form-control" id="myInput"  name="search" placeholder="Search..">
                         </div>
                     </div>
                     <!-- <div class="container" style="padding-right:100px;">
@@ -50,19 +50,19 @@
                       <tbody id="myTable">
                         <tr>
                           <td>YES</td>
-                          <td>DEC 2021</td>
+                          <td>july 2021</td>
                           <td>MONDAY</td>
                           <td>ASDASD</td>
                         </tr>
                         <tr>
                           <td>NO</td>
-                          <td>DEC 2022</td>
+                          <td>july 2022</td>
                           <td>TUESDAY</td>
                           <td>QWEQWE</td>
                         </tr>
                         <tr>
                           <td>NO</td>
-                          <td>DEC 2023</td>
+                          <td>july 2023</td>
                           <td>WEDNESDAY</td>
                           <td>ZXCZXC</td>
                         </tr>

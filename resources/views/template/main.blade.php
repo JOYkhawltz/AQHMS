@@ -468,16 +468,13 @@ $outlet = 'DR Abdul Qadir Khan Hospital';
                     </li>
 
                     <li
-                        class="treeview {{Active::checkRoute(['InventoryView','StorefileView','ProductmasterfileView','StoreadjustmentView','ProductcategoryfileView'])}}">
+                        class="treeview {{Active::checkRoute(['StorefileView','ProductmasterfileView','StoreadjustmentView','ProductcategoryfileView'])}}">
                         <a href="#"><i class="fa fa-warehouse"></i><span> INVENTORY</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('InventoryView')}}"><a href="{{route('InventoryView')}}"><i
-                                class="fa fa-warehouse"></i><span> INVENTORY </span></a>
-                            </li>
                             <li class="{{Active::checkRoute('StorefileView')}}"><a href="{{route('StorefileView')}}"><i
                                 class="fa fa-warehouse" ></i><span>  STORE FILE  </span></a>
                             </li>

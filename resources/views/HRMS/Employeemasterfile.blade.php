@@ -23,7 +23,7 @@
         <!-- Horizontal Form -->
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">{{__('PURCHASE INVOICE Form')}}</h3>
+                <h3 class="box-title">{{__('EMPLOYEE MASTER FILE FORM')}}</h3>
             </div>
             <form method="post" action="{{ route('patient_register') }}" class="form-horizontal">
                 {{csrf_field()}}
@@ -98,5 +98,9 @@
                                 class="form-control" name="Comment" placeholder="Enter Party Bill">
                         </div>
                     </div>
+                </div>
+                </div>
+                </div>
+                </div>
                 </div>
 @endsection

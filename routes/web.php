@@ -88,7 +88,6 @@ Route::get('/SalesReturn', ['as' => 'SalesReturnView', 'uses' => 'SalesControlle
 Route::get('/SalesInvoice', ['as' => 'SalesInvoiceView', 'uses' => 'SalesController@SalesInvoice'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Receipt&refund', ['as' => 'Receipt&refundView', 'uses' => 'SalesController@Receiptandrefund'])->middleware('auth', 'pharmacist', 'lang');
 // INVENTORY
-Route::get('/inventory', ['as' => 'InventoryView', 'uses' => 'InventoryController@index'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/storefile', ['as' => 'StorefileView', 'uses' => 'InventoryController@StoreFile'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/productmasterfile', ['as' => 'ProductmasterfileView', 'uses' => 'InventoryController@ProductMasterFile'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/storeadjustment', ['as' => 'StoreadjustmentView', 'uses' => 'InventoryController@StoreAdjustment'])->middleware('auth', 'pharmacist', 'lang');
