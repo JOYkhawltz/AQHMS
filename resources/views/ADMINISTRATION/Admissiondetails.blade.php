@@ -13,59 +13,100 @@
 @endsection
 
 @section('main_content')
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
-
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid red;
-}
-
-.button3:hover {
-  background-color: red;
-  color: white;
-}
-
-</style>
+<script src="/js/WebCam/webcam.js"></script>
 
 
-<h1>MORE ACCOUNT OPTIONS</h1>
-
-
-<button class="button button1">General Account</button>
-<button class="button button2">Staff Account</button>
-<button class="button button3">Patient Account</button>
+<div class="row">
+    <!-- right column -->
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <!-- Horizontal Form -->
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{__('ADMISSION DETAILS FORM')}}</h3>
+            </div>
+            <form method="post" action="{{ route('AdmissiondetailsView') }}" class="form-horizontal">
+                {{csrf_field()}}
+                <div class="box-body">
+                      <div class="form-group">
+                        <label for="Registrationno" class="col-sm-2 control-label">{{__('Admission no #')}} <span
+                                style="color:red">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" name="Registrationno" placeholder="Enter Registration number">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="admdate" class="col-sm-2 control-label">{{__('Admission Date')}}</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="admdate">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="mrnno" class="col-sm-2 control-label">{{__('MRN no #')}}</label>
+                        <div class="col-sm-10">
+                            <input type="number" 
+                                class="form-control" name="mrnno" placeholder="Enter MRN no.">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="pname" class="col-sm-2 control-label">{{__('Patient Name')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="pname" placeholder="Enter patient name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="Admissiontype" class="col-sm-2 control-label">{{__('Admission Type')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="Admissiontype" placeholder="select Admission type">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="roomtype" class="col-sm-2 control-label">{{__('Room Type')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="roomtype" placeholder="select room type">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="patienttype" class="col-sm-2 control-label">{{__('Patient Type')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="patienttype" placeholder="select patient type">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="bedno" class="col-sm-2 control-label">{{__('Bed #')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="bedno" placeholder="select bed">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="admitteddoctor" class="col-sm-2 control-label">{{__('Admitted Doctor')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="admitteddoctor" placeholder="select admitted doctor">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="approveddoctor" class="col-sm-2 control-label">{{__('Approved Doctor')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="approveddoctor" placeholder="select approved doctor">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="dischargeddate" class="col-sm-2 control-label">{{__('Discharged Date')}}</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="dischargeddate">
+                        </div>
+                      </div>
+                      
+                  </div>
+              </form>
+          </div>
+    </div>
+</div>
 @endsection

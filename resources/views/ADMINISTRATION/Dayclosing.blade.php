@@ -13,59 +13,58 @@
 @endsection
 
 @section('main_content')
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
-
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid red;
-}
-
-.button3:hover {
-  background-color: red;
-  color: white;
-}
-
-</style>
+<script src="/js/WebCam/webcam.js"></script>
 
 
-<h1>MORE ACCOUNT OPTIONS</h1>
-
-
-<button class="button button1">General Account</button>
-<button class="button button2">Staff Account</button>
-<button class="button button3">Patient Account</button>
+<div class="row">
+    <!-- right column -->
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <!-- Horizontal Form -->
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{__('ADMISSION DETAILS FORM')}}</h3>
+            </div>
+            <form method="post" action="{{ route('AdmissiondetailsView') }}" class="form-horizontal">
+                {{csrf_field()}}
+                <div class="box-body">
+                      <div class="form-group">
+                        <label for="closeno" class="col-sm-2 control-label">{{__('Close #')}} <span
+                                style="color:red">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" name="closeno" placeholder="Auto generate" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="date" class="col-sm-2 control-label">{{__('Date')}}</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="date">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="closeuser" class="col-sm-2 control-label">{{__('Close User')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="closeuser" placeholder="Select close user">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="closeby" class="col-sm-2 control-label">{{__('Close by')}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                class="form-control" name="closeby" placeholder="Enter close by">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="closedatetime" class="col-sm-2 control-label">{{__('Close Date Time')}}</label>
+                        <div class="col-sm-10">
+                            <input type="datetime-local" class="form-control" name="closedatetime">
+                        </div>
+                      </div>
+                      
+                  </div>
+              </form>
+          </div>
+    </div>
+</div>
 @endsection
