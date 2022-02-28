@@ -521,16 +521,13 @@ $outlet = 'DR Abdul Qadir Khan Hospital';
                     </li>
 
                     <li
-                        class="treeview {{Active::checkRoute(['AdministrationView','LabtestView','TherapyregistrationView','TherapeuticservicesView','AdmissiondetailsView','DayclosingView','AmbulancereceiptView','OPDslipView','LabtestapprovalView'])}}">
+                        class="treeview {{Active::checkRoute(['LabtestView','TherapyregistrationView','TherapeuticservicesView','AdmissiondetailsView','DayclosingView','AmbulancereceiptView','OPDslipView','LabtestapprovalView'])}}">
                         <a href="#"><i class="fa fa-users-cog"></i><span> ADMINISTRATION</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="{{Active::checkRoute('AdministrationView')}}"><a href="{{route('AdministrationView')}}"><i
-                                class="fa fa-users-cog"></i><span> ADMINISTRATION </span></a>
-                            </li>
                             <li class="{{Active::checkRoute('LabtestView')}}"><a href="{{route('LabtestView')}}"><i
                                 class="fa fa-users-cog"></i><span> LAB TEST </span></a>
                             </li>

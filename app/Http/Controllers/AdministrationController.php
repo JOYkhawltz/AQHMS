@@ -7,12 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AdministrationController extends Controller
 {
-    public function index()
-    {
-        $user = Auth::user();
-        return view('ADMINISTRATION.administration',
-        ['title' => "administration"]);
-    }
     public function LabTest()
     {
         $user = Auth::user();

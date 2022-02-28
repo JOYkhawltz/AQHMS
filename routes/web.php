@@ -100,7 +100,6 @@ Route::get('/StockReports', ['as' => 'StockReportsView', 'uses' => 'ReportssCont
 Route::get('/ChallanReports', ['as' => 'ChallanReportsView', 'uses' => 'ReportssController@ChallanReports'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/FinancialReports', ['as' => 'FinancialReportsView', 'uses' => 'ReportssController@FinancialReports'])->middleware('auth', 'pharmacist', 'lang');
 // administration 
-Route::get('/administration', ['as' => 'AdministrationView', 'uses' => 'AdministrationController@index'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Labtest', ['as' => 'LabtestView', 'uses' => 'AdministrationController@LabTest'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Therapyregistration', ['as' => 'TherapyregistrationView', 'uses' => 'AdministrationController@TherapyRegistration'])->middleware('auth', 'pharmacist', 'lang');
 Route::get('/Therapeuticservices', ['as' => 'TherapeuticservicesView', 'uses' => 'AdministrationController@TherapeuticServices'])->middleware('auth', 'pharmacist', 'lang');
